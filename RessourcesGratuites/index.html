@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ressources Gratuites — Design & Création</title>
+  <meta name="description" content="Une encyclopédie d'outils et ressources gratuites pour designers & créateurs — polices, icônes, images, sons, mockups et plus." />
+  <meta property="og:title" content="Ressources Gratuites — Design & Création" />
+  <meta property="og:description" content="Une encyclopédie d'outils et ressources gratuites pour designers & créateurs." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✦</text></svg>" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <div class="header-controls">
+      <button class="lang-toggle" id="lang-toggle" title="Switch language">EN</button>
+      <button class="theme-toggle" id="theme-toggle" title="Changer le thème">🌙</button>
+    </div>
+    <div class="hero">
+      <h1 data-i18n="h1">✦ Ressources Gratuites</h1>
+      <p class="hero-sub" data-i18n="heroSub">Une encyclopédie d'outils et ressources pour designers & créateurs</p>
+      <div class="search-wrap">
+        <input type="text" id="search" placeholder="Rechercher une ressource..." autocomplete="off" />
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="categories" id="categories"></div>
+    <div class="results-count" id="count"></div>
+    <div class="grid" id="grid"></div>
+    <div class="empty-state" id="empty" style="display:none">
+      <span>🔍</span>
+      <p data-i18n="empty">Aucune ressource trouvée</p>
+    </div>
+  </main>
+
+  <footer data-i18n="footer">© 2026 Valentin L. — Ressources mises à jour régulièrement</footer>
+
+  <script src="resources.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node -e \"require\\('./RessourcesGratuites/script.js'\\)\")",
+      "Bash(node --input-type=module)",
+      "Bash(node -e ' *)"
+    ]
+  }
+}

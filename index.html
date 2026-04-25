@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Valentin L. — Graphiste Freelance</title>
+  <meta name="description" content="Graphiste freelance spécialisé en identité visuelle, motion design et direction artistique." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✦</text></svg>" />
+  <style>
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --bg:           #0d1608;
+      --glow:         rgba(40, 54, 24, 0.7);
+      --card-bg:      #151f0d;
+      --card-border:  #2a3a16;
+      --text:         #FEFAE0;
+      --text-2:       #8a9a6a;
+      --text-muted:   rgba(138, 154, 106, 0.55);
+      --accent:       #BC6C25;
+      --accent-2:     #DDA15E;
+      --link-bg:      #1a2410;
+      --link-border:  #354520;
+      --link-hover:   #1f2b12;
+      --link-hover-b: #606C38;
+      --sep:          rgba(96, 108, 56, 0.2);
+      --shadow:       rgba(0, 0, 0, 0.5);
+    }
+
+    body {
+      min-height: 100vh;
+      background-color: var(--bg);
+      background-image:
+        radial-gradient(ellipse 80% 60% at 50% 20%, var(--glow), transparent 70%);
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 32px 16px;
+    }
+
+    /* ── Card ── */
+
+    .card {
+      width: 100%;
+      max-width: 420px;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 28px;
+      padding: 40px 32px 32px;
+      box-shadow: 0 32px 80px var(--shadow);
+      animation: fadeUp 0.5s ease both;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ── Profile ── */
+
+    .profile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin-bottom: 32px;
+    }
+
+    .avatar {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: var(--accent);
+      color: #FEFAE0;
+      font-size: 1.5rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 18px;
+      box-shadow: 0 0 0 4px rgba(188, 108, 37, 0.18);
+    }
+
+    .status {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.72rem;
+      color: var(--text-2);
+      background: rgba(96, 108, 56, 0.12);
+      border: 1px solid rgba(96, 108, 56, 0.25);
+      border-radius: 999px;
+      padding: 4px 12px;
+      margin-bottom: 16px;
+      letter-spacing: 0.3px;
+    }
+
+    .status-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #6fcf4a;
+      box-shadow: 0 0 6px #6fcf4a;
+      flex-shrink: 0;
+    }
+
+    h1 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      letter-spacing: -0.3px;
+      color: var(--text);
+      margin-bottom: 6px;
+    }
+
+    .tagline {
+      font-size: 0.88rem;
+      color: var(--accent-2);
+      font-weight: 500;
+      margin-bottom: 12px;
+    }
+
+    .bio {
+      font-size: 0.82rem;
+      color: var(--text-2);
+      line-height: 1.6;
+      max-width: 300px;
+    }
+
+    /* ── Links ── */
+
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 28px;
+    }
+
+    .link-btn {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 14px 18px;
+      background: var(--link-bg);
+      border: 1px solid var(--link-border);
+      border-radius: 14px;
+      color: var(--text);
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 500;
+      transition: background 0.18s, border-color 0.18s, transform 0.18s, box-shadow 0.18s;
+    }
+
+    .link-btn:hover {
+      background: var(--link-hover);
+      border-color: var(--link-hover-b);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+    }
+
+    .link-btn.featured {
+      border-color: rgba(188, 108, 37, 0.4);
+      background: rgba(188, 108, 37, 0.08);
+    }
+
+    .link-btn.featured:hover {
+      border-color: var(--accent);
+      background: rgba(188, 108, 37, 0.14);
+    }
+
+    .link-icon {
+      font-size: 1rem;
+      width: 22px;
+      text-align: center;
+      flex-shrink: 0;
+    }
+
+    .link-text {
+      flex: 1;
+    }
+
+    .link-arrow {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      transition: color 0.18s, transform 0.18s;
+    }
+
+    .link-btn:hover .link-arrow {
+      color: var(--accent-2);
+      transform: translateX(3px);
+    }
+
+    /* ── Separator ── */
+
+    .sep {
+      height: 1px;
+      background: var(--sep);
+      margin-bottom: 24px;
+    }
+
+    /* ── Socials ── */
+
+    .socials {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .social-btn {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background: var(--link-bg);
+      border: 1px solid var(--link-border);
+      color: var(--text-2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      transition: background 0.18s, border-color 0.18s, color 0.18s, transform 0.18s;
+    }
+
+    .social-btn:hover {
+      background: var(--link-hover);
+      border-color: var(--link-hover-b);
+      color: var(--text);
+      transform: translateY(-2px);
+    }
+
+    .social-btn svg {
+      width: 17px;
+      height: 17px;
+    }
+
+    /* ── Footer note ── */
+
+    .card-footer {
+      text-align: center;
+      margin-top: 24px;
+      font-size: 0.7rem;
+      color: var(--text-muted);
+    }
+
+    /* ── Responsive ── */
+
+    @media (max-width: 480px) {
+      .card {
+        padding: 32px 24px 28px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+
+    <div class="profile">
+      <div class="avatar">VL</div>
+      <span class="status">
+        <span class="status-dot"></span>
+        Disponible pour missions
+      </span>
+      <h1>Valentin L.</h1>
+      <p class="tagline">Graphiste Freelance</p>
+      <p class="bio">Identité visuelle, motion design &amp; direction artistique. Je crée des univers graphiques qui marquent les esprits.</p>
+    </div>
+
+    <div class="links">
+      <a href="RessourcesGratuites/" class="link-btn featured">
+        <span class="link-icon">✦</span>
+        <span class="link-text">Ressources Gratuites</span>
+        <span class="link-arrow">→</span>
+      </a>
+      <a href="#" class="link-btn">
+        <span class="link-icon">🖼</span>
+        <span class="link-text">Portfolio</span>
+        <span class="link-arrow">→</span>
+      </a>
+      <a href="mailto:contact@exemple.com" class="link-btn">
+        <span class="link-icon">✉</span>
+        <span class="link-text">Me contacter</span>
+        <span class="link-arrow">→</span>
+      </a>
+    </div>
+
+    <div class="sep"></div>
+
+    <div class="socials">
+
+      <!-- Instagram -->
+      <a href="#" class="social-btn" title="Instagram">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="2" width="20" height="20" rx="5"/>
+          <circle cx="12" cy="12" r="4"/>
+          <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/>
+        </svg>
+      </a>
+
+      <!-- Behance -->
+      <a href="#" class="social-btn" title="Behance">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M22 7h-7V5h7v2zm1.726 10c-.442 1.297-2.029 3-5.101 3-3.074 0-5.564-1.729-5.564-5.675 0-3.91 2.325-5.92 5.466-5.92 3.082 0 4.964 1.782 5.375 4.426.078.506.109 1.188.095 2.14H15.97c.13 3.211 3.483 3.312 4.588 2.029H23.7zm-7.719-4h4.154c-.07-1.369-1.098-1.972-2.062-1.972-.949 0-1.913.592-2.092 1.972zm-2.113 2.005c-.106-.939-.53-1.73-1.163-2.286.682-.307 1.285-.875 1.285-1.969 0-2.139-1.595-3.162-3.768-3.162H4v12h8.447c2.188 0 3.973-1.264 3.973-3.584 0-1.131-.296-1.93-.526-1.999zm-7.274-5.172h3.508c.79 0 1.53.279 1.53 1.247 0 .87-.6 1.25-1.487 1.25H6.62V9.833zm0 7.197v-2.942h3.687c.989 0 1.667.41 1.667 1.48 0 1.03-.709 1.462-1.667 1.462H6.62z"/>
+        </svg>
+      </a>
+
+      <!-- LinkedIn -->
+      <a href="#" class="social-btn" title="LinkedIn">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+          <rect x="2" y="9" width="4" height="12"/>
+          <circle cx="4" cy="4" r="2"/>
+        </svg>
+      </a>
+
+      <!-- X / Twitter -->
+      <a href="#" class="social-btn" title="X">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+        </svg>
+      </a>
+
+      <!-- Dribbble -->
+      <a href="#" class="social-btn" title="Dribbble">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"/>
+          <path d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85m19.5 1.9c-3.5-.93-6.63-.82-8.94 0-2.58.92-5.01 2.86-7.44 6.32"/>
+        </svg>
+      </a>
+
+    </div>
+
+    <p class="card-footer">© 2026 Valentin L.</p>
+
+  </div>
+
+</body>
+</html>
